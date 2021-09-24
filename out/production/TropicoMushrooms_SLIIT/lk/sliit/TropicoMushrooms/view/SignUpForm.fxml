@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" prefHeight="491.0" prefWidth="734.0" style="-fx-background-color: transparent; -fx-background-radius: 2em;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.sliit.TropicoMushrooms.controller.SignUpFormController">
+    <children>
+        <AnchorPane layoutX="1.0" prefHeight="170.0" prefWidth="736.0" style="-fx-background-color: blue; -fx-background-radius: 2em;">
+         <children>
+                <Circle fill="WHITE" layoutX="713.0" layoutY="19.0" radius="13.0" stroke="BLACK" strokeType="INSIDE" />
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="BLUE" height="5.0" layoutX="705.0" layoutY="17.0" stroke="WHITE" strokeType="INSIDE" width="17.0" />
+                <Circle accessibleRole="BUTTON" fill="#fcfcfc" layoutX="713.0" layoutY="19.0" onMouseClicked="#btnMinimizeOnMouseClicked" opacity="0.0" radius="13.0" stroke="BLACK" strokeType="INSIDE">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Circle>
+         </children></AnchorPane>
+        <AnchorPane layoutY="170.0" prefHeight="410.0" prefWidth="736.0" style="-fx-background-color: white; -fx-background-radius: 3em;">
+         <children>
+              <Text fill="BLUE" layoutX="25.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Signup" underline="true">
+                  <font>
+                      <Font name="System Bold Italic" size="24.0" />
+                  </font>
+              </Text>
+              <JFXTextField fx:id="txtUserName" layoutX="173.0" layoutY="61.0" onKeyPressed="#txtUserNameOnKeyPressed" promptText="User Name">
+                  <font>
+                      <Font size="14.0" />
+                  </font>
+              </JFXTextField>
+              <JFXPasswordField fx:id="txtOldPassword" layoutX="173.0" layoutY="118.0" onKeyPressed="#txtOldPasswordOnPressed" onKeyReleased="#txtOldPasswordOnPressed" promptText="Password">
+                  <font>
+                      <Font size="14.0" />
+                  </font>
+              </JFXPasswordField>
+              <Text layoutX="25.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name">
+                  <font>
+                      <Font name="System Bold" size="14.0" />
+                  </font>
+              </Text>
+              <Text layoutX="25.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temporary Password">
+                  <font>
+                      <Font name="System Bold" size="14.0" />
+                  </font>
+              </Text>
+            <JFXPasswordField fx:id="txtNewPassword" layoutX="173.0" layoutY="179.0" onKeyPressed="#txtNewPasswordOnAction" promptText="Password">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <Text layoutX="25.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Password">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <JFXPasswordField fx:id="txtConfirmPassword" layoutX="173.0" layoutY="242.0" onKeyPressed="#txtConfirmPasswordOnAction" promptText="Password">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <Text layoutX="25.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Password">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+              <Text fx:id="lblErrorUserName" fill="RED" layoutX="174.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name incorrect...!" />
+            <Text fx:id="lblErrorOldPassword" fill="RED" layoutX="174.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password incorrect...!" />
+            <Text fx:id="lblErrorNewPassword" fill="RED" layoutX="173.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password does not match...!" />
+            <Text fx:id="lblErrorConfirmPassword" fill="RED" layoutX="174.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password does not match...!" />
+            <Separator layoutX="374.0" layoutY="16.0" orientation="VERTICAL" prefHeight="299.0" prefWidth="0.0" />
+            <JFXTextField fx:id="txtA1" layoutX="494.0" layoutY="104.0" prefHeight="25.0" prefWidth="200.0" promptText="Answer">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="cmbQ1" labelFloat="true" layoutX="400.0" layoutY="62.0" prefHeight="30.0" prefWidth="250.0" promptText="Security Questions 01" />
+            <Text layoutX="417.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Answer :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="txtA2" layoutX="494.0" layoutY="195.0" prefHeight="25.0" prefWidth="200.0" promptText="Answer">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="cmbQ2" labelFloat="true" layoutX="400.0" layoutY="153.0" prefHeight="30.0" prefWidth="250.0" promptText="Security Questions 02" />
+            <Text layoutX="417.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Answer :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="BLUE" layoutX="398.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Security Questions" underline="true">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Text>
+              <JFXButton fx:id="btnSignUp" layoutX="252.0" layoutY="335.0" onAction="#btnLoginOnAction" onKeyPressed="#btnLoginOnKeyPressed" prefHeight="45.0" prefWidth="112.0" style="-fx-border-color: green;" text="Sign Up">
+                  <font>
+                      <Font name="System Bold" size="14.0" />
+                  </font>
+                  <cursor>
+                      <Cursor fx:constant="HAND" />
+                  </cursor>
+              </JFXButton>
+              <JFXButton layoutX="384.0" layoutY="335.0" onAction="#btnExitOnAction" onKeyPressed="#btnExitOnKeyPressed" prefHeight="45.0" prefWidth="72.0" style="-fx-border-color: red;" text="Exit">
+                  <font>
+                      <Font name="System Bold" size="14.0" />
+                  </font>
+                  <cursor>
+                      <Cursor fx:constant="HAND" />
+                  </cursor>
+              </JFXButton>
+            <JFXTextField fx:id="txtA3" layoutX="494.0" layoutY="284.0" prefHeight="25.0" prefWidth="200.0" promptText="Answer">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="cmbQ3" labelFloat="true" layoutX="400.0" layoutY="242.0" prefHeight="30.0" prefWidth="250.0" promptText="Security Questions 03" />
+            <Text layoutX="417.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Answer :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="imgCorrectUserName" fitHeight="26.0" fitWidth="26.0" layoutX="333.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../asserts/green-right.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgCorrectOldPassword" fitHeight="26.0" fitWidth="26.0" layoutX="333.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../asserts/green-right.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="lblErrorFillAllRecords" fill="RED" layoutX="235.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fill All Records...!" />
+            <ImageView fx:id="imgWrongUserName" fitHeight="32.0" fitWidth="33.0" layoutX="333.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/red-cross.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgWrongOldPassword" fitHeight="32.0" fitWidth="33.0" layoutX="330.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/red-cross.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+        <Text fill="WHITE" layoutX="66.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tropico Mushrooms">
+            <font>
+                <Font name="System Bold" size="64.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="72.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sales Management System">
+            <font>
+                <Font name="System Bold" size="48.0" />
+            </font>
+        </Text>
+    </children>
+</AnchorPane>

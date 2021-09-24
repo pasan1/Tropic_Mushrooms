@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="711.0" prefWidth="1357.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.sliit.TropicoMushrooms.controller.EmployeeMainFormController">
+   <children>
+      <AnchorPane fx:id="paneUser" layoutX="10.0" layoutY="3.0" prefHeight="79.0" prefWidth="294.0" style="-fx-background-color: linear-gradient(to bottom, #8f8cda, #819ada, #7fa6d4, #89aecb, #9bb5c2); -fx-background-radius: 60; -fx-background-radius: 60; -fx-border-width: 5;">
+         <children>
+            <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="21.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/userPic.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btnArrowDown" accessibleRole="BUTTON" fitHeight="24.0" fitWidth="33.0" layoutX="241.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/black-triangle-down.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="btnArrowUp" accessibleRole="BUTTON" fitHeight="24.0" fitWidth="33.0" layoutX="241.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../asserts/black-triangle-up.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label fx:id="lblUserName" layoutX="55.0" layoutY="26.0" text="Hi! User">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneTitle" layoutX="314.0" layoutY="4.0" prefHeight="71.0" prefWidth="1040.0" style="-fx-background-color: linear-gradient(to bottom, #8f8cda, #819ada, #7fa6d4, #89aecb, #9bb5c2); -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 2;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="10.0" layoutX="958.0" layoutY="31.0" stroke="BLUE" strokeType="INSIDE" width="27.0" />
+            <Text fx:id="lblTitle" layoutX="87.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Tropico Mushrooms's | Sale Management System" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <ImageView accessibleRole="BUTTON" fitHeight="30.0" fitWidth="30.0" layoutX="995.0" layoutY="21.0" onMouseClicked="#btnExitOnMouseClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/exit.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView accessibleRole="BUTTON" fitHeight="33.0" fitWidth="33.0" layoutX="954.0" layoutY="19.0" onMouseClicked="#btnMinimizeOnMouseClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/minimize.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="imgHome" accessibleRole="BUTTON" fitHeight="52.0" fitWidth="60.0" layoutX="18.0" layoutY="9.0" onMouseClicked="#imgHomeOnMouseClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/home.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane fx:id="paneMenu" layoutY="99.0" prefHeight="601.0" prefWidth="310.0" style="-fx-background-color: transparent;">
+         <children>
+            <JFXButton layoutX="17.0" layoutY="46.0" onAction="#btnSalesOnAction" prefHeight="68.0" prefWidth="282.0" ripplerFill="#dd4c4c" style="-fx-background-color: linear-gradient(to bottom, #8f8cda, #819ada, #7fa6d4, #89aecb, #9bb5c2); -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 2;" text="Sales" textAlignment="CENTER" textFill="#535151">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton layoutX="17.0" layoutY="435.0" onAction="#btnCustomerOnAction" prefHeight="68.0" prefWidth="282.0" style="-fx-background-color: linear-gradient(to bottom, #8f8cda, #819ada, #7fa6d4, #89aecb, #9bb5c2); -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 2;" text="Customer" textAlignment="CENTER" textFill="#535151">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton layoutX="18.0" layoutY="258.0" onAction="#btnItemOnAction" prefHeight="68.0" prefWidth="282.0" style="-fx-background-color: linear-gradient(to bottom, #8f8cda, #819ada, #7fa6d4, #89aecb, #9bb5c2); -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 2;" text="Item" textAlignment="CENTER" textFill="#535151">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton layoutX="17.0" layoutY="340.0" onAction="#btnPurchaseOnAction" prefHeight="68.0" prefWidth="282.0" style="-fx-background-color: linear-gradient(to bottom, #8f8cda, #819ada, #7fa6d4, #89aecb, #9bb5c2); -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 2;" text="Purchase" textAlignment="CENTER" textFill="#535151">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton layoutX="17.0" layoutY="157.0" onAction="#btnReturnsOnAction" prefHeight="68.0" prefWidth="282.0" ripplerFill="#5c052a" style="-fx-background-color: linear-gradient(to bottom, #8f8cda, #819ada, #7fa6d4, #89aecb, #9bb5c2); -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 2;" text="Returns" textAlignment="CENTER" textFill="#535151">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children></AnchorPane>
+      <AnchorPane fx:id="paneBody" layoutX="313.0" layoutY="83.0" prefHeight="621.0" prefWidth="1040.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 2; -fx-background-color: linear-gradient(to bottom, #c2b4e1, #b1c3e7, #accee4, #b6d6de, #c8dcda);" />
+      <AnchorPane fx:id="paneUserOptions" layoutX="3.0" layoutY="94.0" prefHeight="339.0" prefWidth="307.0" style="-fx-background-color: transparent;" visible="false">
+         <children>
+            <JFXButton layoutX="13.0" layoutY="47.0" onAction="#btnAccountOnAction" prefHeight="68.0" prefWidth="282.0" style="-fx-background-color: linear-gradient(to bottom, #8f8cda, #819ada, #7fa6d4, #89aecb, #9bb5c2); -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 2;" text="Account" textAlignment="CENTER" textFill="#535151">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Text fill="WHITE" layoutX="21.0" layoutY="30.0" onMouseClicked="#txtGoBackOnMouseClicked" strokeType="OUTSIDE" strokeWidth="0.0" text="Go Back" textAlignment="CENTER" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+            <JFXButton layoutX="15.0" layoutY="155.0" onAction="#btnChangePasswordOnAction" prefHeight="68.0" prefWidth="282.0" style="-fx-background-color: linear-gradient(to bottom, #8f8cda, #819ada, #7fa6d4, #89aecb, #9bb5c2); -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 2;" text="Change Password" textAlignment="CENTER" textFill="#535151">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnLogout" layoutX="14.0" layoutY="255.0" onAction="#btnLogoutOnAction" prefHeight="68.0" prefWidth="282.0" style="-fx-background-color: linear-gradient(to bottom, #8f8cda, #819ada, #7fa6d4, #89aecb, #9bb5c2); -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 2;" text="Logout" textAlignment="CENTER" textFill="#535151">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneUserDisplay" layoutX="9.0" layoutY="4.0" onMouseClicked="#btnUserNameOnMouseClicked" prefHeight="79.0" prefWidth="294.0" style="-fx-background-color: transparent; -fx-background-radius: 60; -fx-background-radius: 60; -fx-border-width: 5;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </AnchorPane>
+   </children>
+</AnchorPane>

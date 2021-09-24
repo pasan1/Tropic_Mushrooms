@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 7.9.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CustomerReport" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="270a6510-3414-4656-9342-36f6b9e7f696">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Data Adapter for TropicoMushrooms"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM customer;]]>
+	</queryString>
+	<field name="CustomerID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="CustomerID"/>
+		<property name="com.jaspersoft.studio.field.label" value="CustomerID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Address" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Address"/>
+		<property name="com.jaspersoft.studio.field.label" value="Address"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Mobile" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Mobile"/>
+		<property name="com.jaspersoft.studio.field.label" value="Mobile"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NIC" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="NIC"/>
+		<property name="com.jaspersoft.studio.field.label" value="NIC"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="Group1">
+		<groupExpression><![CDATA[$F{CustomerID}]]></groupExpression>
+		<groupHeader>
+			<band height="40">
+				<textField>
+					<reportElement style="SubTitle" x="0" y="13" width="553" height="24" forecolor="#990099" uuid="0af2eb97-cf9e-4640-a988-bc290a275a38"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{CustomerID}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="6"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="69" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="bcf29663-c4b8-483e-a197-e5f6920fd2a2"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Tropico Mushrooms]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="63" y="46" width="200" height="22" uuid="c089ef81-84c2-4243-a7e9-0e0a8992e71a"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Customer Report]]></text>
+			</staticText>
+			<image>
+				<reportElement x="480" y="0" width="70" height="68" uuid="5175431b-08ee-47e6-becf-2aa3079bf6e4"/>
+				<imageExpression><![CDATA["D:/IJSE/CMJD81/Friends/To/Tharanga/TropicoMushrooms_SLIIT/src/lk/sliit/TropicoMushrooms/asserts/mashroomlogo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="9d02e302-57b8-432b-babd-efb2418804ba"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="138" height="15" uuid="bdab9560-79a6-43d6-99db-5d79a39fb6df">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="90ff0442-2142-47c9-9acc-47792d8969b4"/>
+				</reportElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="138" y="19" width="138" height="15" uuid="ab386ce3-f804-4984-8e69-02c93320146b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="185e2ac5-11fe-45a2-b03e-e8dcf6593443"/>
+				</reportElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="276" y="19" width="138" height="15" uuid="a00246d4-645b-4508-9a3a-7845964c4e86">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bdc2994b-558a-43fb-b151-23d922362854"/>
+				</reportElement>
+				<text><![CDATA[Mobile]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="414" y="19" width="138" height="15" uuid="827a960a-c82e-4bbf-a998-4aec0ef5608b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ff9cd77e-faf7-4278-a601-ff50fbc7cd07"/>
+				</reportElement>
+				<text><![CDATA[NIC]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="e333df44-9887-45d8-a569-1c4607976a27"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="138" height="15" uuid="427b4183-4cb8-4292-9366-ac8927af9415">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="90ff0442-2142-47c9-9acc-47792d8969b4"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="138" y="0" width="138" height="15" uuid="a065cdf8-7a29-4832-97ca-778766c90f6f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="185e2ac5-11fe-45a2-b03e-e8dcf6593443"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="276" y="0" width="138" height="15" uuid="c8cd67c5-3924-462f-b32c-b816016a8206">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bdc2994b-558a-43fb-b151-23d922362854"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Mobile}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="414" y="0" width="138" height="15" uuid="6b4e4e02-eff9-4656-8777-e3158cfc5bbb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ff9cd77e-faf7-4278-a601-ff50fbc7cd07"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{NIC}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="f4ea54fc-a4b9-4971-acd1-638c2e274a20"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="433509ef-2a34-4797-9cd1-684511ae022d"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="27402784-6be1-4e60-b9c7-c3664ea17454"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="e16da2cc-f2dd-4b0a-a299-981148326ee6"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

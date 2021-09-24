@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" prefHeight="491.0" prefWidth="734.0" style="-fx-background-color: transparent; -fx-background-radius: 2em;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.sliit.TropicoMushrooms.controller.LoginFormController">
+   <children>
+      <AnchorPane layoutX="321.0" prefHeight="491.0" prefWidth="48.0" style="-fx-background-color: blue;" />
+      <AnchorPane layoutX="1.0" prefHeight="491.0" prefWidth="367.0" style="-fx-background-color: blue; -fx-background-radius: 2em;" />
+      <AnchorPane layoutX="369.0" prefHeight="491.0" prefWidth="367.0" style="-fx-background-color: white; -fx-background-radius: 3em;">
+         <children>
+            <Circle fill="BLUE" layoutX="341.0" layoutY="25.0" radius="13.0" stroke="BLACK" strokeType="INSIDE" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="5.0" layoutX="333.0" layoutY="23.0" stroke="WHITE" strokeType="INSIDE" width="17.0" />
+            <Circle accessibleRole="BUTTON" fill="BLUE" layoutX="341.0" layoutY="25.0" onMouseClicked="#btnMinimizeOnMouseClicked" opacity="0.0" radius="13.0" stroke="BLACK" strokeType="INSIDE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+         </children></AnchorPane>
+      <Text layoutX="59.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sales Management System">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="0.4952380952380952" endY="1.0" startX="0.5476190476190477" startY="1.0">
+               <stops>
+                  <Stop color="#1500ff" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <Text fill="BLUE" layoutX="474.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="62.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tropico Mushrooms">
+         <font>
+            <Font name="System Bold" size="64.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="0.4952380952380952" endY="1.0" startX="0.5047619047619047" startY="1.0">
+               <stops>
+                  <Stop color="#1500ff" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <JFXTextField fx:id="txtUserName" layoutX="505.0" layoutY="261.0" onAction="#txtUserNameOnAction" promptText="User Name" text="admin">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txtPassword" layoutX="505.0" layoutY="307.0" onAction="#txtPasswordOnAction" promptText="Password" text="1234">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXPasswordField>
+      <Text layoutX="406.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="406.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="btnLogin" layoutX="505.0" layoutY="397.0" onAction="#btnLoginOnAction" onKeyPressed="#btnLoginOnKeyPressed" prefHeight="45.0" prefWidth="112.0" style="-fx-border-color: green;" text="Login">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="637.0" layoutY="397.0" onAction="#btnExitOnAction" onKeyPressed="#btnExitOnKeyPressed" prefHeight="45.0" prefWidth="72.0" style="-fx-border-color: red;" text="Exit">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Text fx:id="lblError" fill="RED" layoutX="505.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name or Password incorrect...!">
+         <font>
+            <Font size="13.0" />
+         </font></Text>
+      <Text fx:id="lblForgotPassword" fill="RED" layoutX="505.0" layoutY="378.0" onMouseClicked="#lblForgotPasswordOnMouseClicked" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot Password" visible="false">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Text>
+      <Text layoutX="14.0" layoutY="473.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developed by Tharanga &amp; Kavindi | SLIIT">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Text>
+   </children>
+</AnchorPane>

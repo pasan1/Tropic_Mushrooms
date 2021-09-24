@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="window" prefHeight="621.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.sliit.TropicoMushrooms.controller.manager.ManageUserFormController">
+    <children>
+        <JFXButton fx:id="btnSearchUser" buttonType="RAISED" layoutX="646.0" layoutY="20.0" onAction="#btnSearchUserOnAction" prefHeight="45.0" prefWidth="138.0" style="-fx-border-color: black;" text="Search User" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <TableView fx:id="tbIUser" layoutX="24.0" layoutY="400.0" prefHeight="208.0" prefWidth="984.0">
+            <columns>
+                <TableColumn fx:id="colUserID" prefWidth="107.0" text="User ID" />
+                <TableColumn fx:id="colName" prefWidth="236.0" text="Name" />
+                <TableColumn fx:id="colNIC" prefWidth="196.0" text="NIC" />
+                <TableColumn fx:id="colMobileNumber" minWidth="0.0" prefWidth="218.0" text="Mobile Number" />
+                <TableColumn fx:id="colDesignation" prefWidth="122.0" text="Designation" />
+                <TableColumn fx:id="colUserName" prefWidth="96.0" text="User Name" />
+            </columns>
+        </TableView>
+        <TextField fx:id="txtSearchUser" layoutX="255.0" layoutY="29.0" prefHeight="25.0" prefWidth="308.0" promptText="Search User by NIC">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <AnchorPane fx:id="paneUserEdit" disable="true" layoutX="21.0" layoutY="60.0" prefHeight="330.0" prefWidth="1005.0">
+            <children>
+                <Text layoutX="390.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID :">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Text>
+                <JFXTextField fx:id="txtName" labelFloat="true" layoutX="22.0" layoutY="71.0" prefHeight="25.0" prefWidth="250.0" promptText="Name" />
+                <JFXTextField fx:id="txtNIC" labelFloat="true" layoutX="22.0" layoutY="127.0" prefHeight="25.0" prefWidth="250.0" promptText="NIC No" />
+                <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="22.0" layoutY="236.0" prefHeight="25.0" prefWidth="533.0" promptText="Address" />
+                <JFXTextField fx:id="txtMobileNumber" labelFloat="true" layoutX="22.0" layoutY="185.0" prefHeight="25.0" prefWidth="250.0" promptText="Mobile Number (07XXXXXXXX)" />
+                <Text fx:id="lblUserID" layoutX="503.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="000">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Text>
+                <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="840.0" layoutY="243.0" onAction="#btnAddOnAction" prefHeight="22.0" prefWidth="138.0" style="-fx-border-color: blue;" text="Add" textAlignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+                <Line endX="-100.0" endY="162.33334350585938" layoutX="888.0" layoutY="154.0" startX="-100.0" startY="-108.0" />
+                <JFXButton fx:id="btnDelete" layoutX="841.0" layoutY="287.0" onAction="#btnDeleteOnAction" prefHeight="22.0" prefWidth="138.0" style="-fx-border-color: red;" text="Delete" textAlignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+                <Line endX="-100.0" endY="162.33334350585938" layoutX="675.0" layoutY="156.0" startX="-100.0" startY="-108.0" />
+                <JFXTextField fx:id="txtUserName" labelFloat="true" layoutX="608.0" layoutY="158.0" prefHeight="35.0" prefWidth="150.0" promptText="User Name">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </JFXTextField>
+            <JFXComboBox fx:id="cmbDesignation" labelFloat="true" layoutX="609.0" layoutY="236.0" prefHeight="35.0" prefWidth="150.0" promptText="Designation">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXComboBox>
+            <Text fill="RED" layoutX="815.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password and Security Questions are changed by this new User" wrappingWidth="164.3332631289959">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="lblNewUser" fill="RED" layoutX="815.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New user Default password: USER" wrappingWidth="142.9998891055584">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            </children>
+        </AnchorPane>
+        <JFXButton fx:id="btnNewUser" buttonType="RAISED" layoutX="833.0" layoutY="20.0" onAction="#btnNewUserOnAction" prefHeight="45.0" prefWidth="138.0" style="-fx-border-color: blue;" text="New User" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+    </children>
+</AnchorPane>
